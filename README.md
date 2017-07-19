@@ -23,3 +23,14 @@ urllib2: A module for getting online html files
 ## How to run:
 Run GUI.py and get everything!!
 
+## Functionality:
+So far this application only getting datas about Laser devices with 3 attributes: Wavelength, Power and Make.
+
+All the functionalities are straightforward on UI.
+
+Get list of devices within a specific range, and their number count.
+
+Get list of devices with a specific company's name.
+
+
+
