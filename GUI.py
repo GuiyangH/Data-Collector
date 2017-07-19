@@ -1,7 +1,6 @@
-import random
 import datetime
 import sqlite3
-from Tkinter import Tk, Label, Button, Entry, StringVar, DISABLED, NORMAL, END, N, S, W, E, Scale, Toplevel
+from Tkinter import Tk, Label, Button, Entry, StringVar, N, S, W, E, Scale
 import ttk
 import main
 import os
@@ -17,8 +16,8 @@ class GuessingGame:
         self.title = ttk.Label(text="Guiyang Laser-Device's Data Fetching System")
         self.company = Label(master, text = "Search by Company's Name: ")
         self.frequency = Label(master, text = "Search by Frequencies: ")
-        self.start = Label(master, text = "Start Range: ")
-        self.end = Label(master, text = "End Range: ")
+        self.start = Label(master, text = "Start Range (nm): ")
+        self.end = Label(master, text = "End Range (nm): ")
 
         self.companies = StringVar()
         self.companies.set("Total Companies Found: ")
@@ -40,8 +39,8 @@ class GuessingGame:
         self.tree_scroll = ttk.Scrollbar(orient="vertical")
         self.output = ttk.Treeview()
         self.output.configure(columns=('Frequencies', 'Powers', 'Manufactor'), show='headings')
-        self.output.heading('Frequencies', text='Frequencies')
-        self.output.heading('Powers', text='Powers')
+        self.output.heading('Frequencies', text='Wavelength')
+        self.output.heading('Powers', text='Power')
         self.output.heading('Manufactor', text='Manufactor')
         self.output.configure(yscrollcommand=self.tree_scroll.set)
         self.tree_scroll.configure(command=self.output.yview)
